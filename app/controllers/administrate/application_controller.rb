@@ -42,6 +42,7 @@ module Administrate
     def create
       resource = new_resource(resource_params)
       authorize_resource(resource)
+      @resource = resource
 
       if resource.save
         redirect_to(
